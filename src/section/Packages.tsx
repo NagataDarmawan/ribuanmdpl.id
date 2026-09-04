@@ -37,7 +37,7 @@ export const PackagesSection = () => {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.2 }}
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14"
         >
           <div className="text-left max-w-2xl space-y-3">
@@ -127,7 +127,7 @@ export const PackagesSection = () => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.2 }}
           className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {featuredPackages.map((pkg) => (
@@ -140,7 +140,7 @@ export const PackagesSection = () => {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           className="flex md:hidden justify-center pt-8"
         >
           <Link href="/paket" className="w-full">

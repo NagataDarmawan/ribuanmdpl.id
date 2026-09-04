@@ -21,7 +21,7 @@ export const CTA = () => {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           className="max-w-3xl text-center space-y-6 flex flex-col items-center"
         >
           {/* Title & Subtitle */}

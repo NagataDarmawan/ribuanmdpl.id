@@ -49,7 +49,8 @@ export default function PaketPage() {
           <motion.div
             variants={fadeInUp}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
             className="text-left max-w-3xl space-y-2"
           >
             <h1 className="text-2xl sm:text-4xl font-bold uppercase text-white font-heading tracking-tight leading-tight drop-shadow-md">
@@ -119,7 +120,8 @@ export default function PaketPage() {
             key={`${searchQuery}-${selectedMonth}-${priceSort}`}
             variants={staggerContainer}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.1 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           >
             {filteredPackages.map((pkg) => (

@@ -18,7 +18,7 @@ export const Testimonials = () => {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           className="text-left max-w-2xl space-y-2"
         >
           <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-neon)]">

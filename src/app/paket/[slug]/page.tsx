@@ -48,7 +48,8 @@ export default function PackageDetailPage({ params }: PageProps) {
         <motion.div 
           variants={fadeInUp} 
           initial="hidden" 
-          animate="visible" 
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
           className="space-y-4 text-left"
         >
           <div>

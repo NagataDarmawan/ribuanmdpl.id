@@ -25,7 +25,7 @@ export const FAQ = () => {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           className="text-left max-w-2xl mb-10 sm:mb-14 space-y-2"
         >
           <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-neon)]">
@@ -39,12 +39,12 @@ export const FAQ = () => {
           </p>
         </motion.div>
 
-        {/* Accordion List - Grid 2 Kolom di Desktop */}
+        {/* Accordion List - Grid 2 Kolom (Animasi Muncul Satu-Satu via staggerContainer) */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start"
         >
           {FAQ_DATA.map((item) => {

@@ -21,14 +21,14 @@ export const Gallery = () => {
 
   return (
     <section id="galeri" className="scroll-mt-20 py-16 sm:py-20 bg-[var(--bg-main)] border-b border-[var(--border-color)]/60 relative overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           className="text-left max-w-2xl mb-10 sm:mb-14 space-y-2"
         >
           <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent-neon)]">
@@ -47,7 +47,7 @@ export const Gallery = () => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
           className="space-y-3 sm:space-y-4"
         >
           {/* BLOK 1: Featured Kiri (2x2) + 4 Foto Kecil Kanan */}
