@@ -8,7 +8,7 @@ export const siteConfig = {
     prefix: "Ribuan",
     highlight: "MDPL",
     domain: ".id",
-    image: "/logo.png",
+    image: "/logokuning.png",
   },
   contact: {
     whatsappNumber: "6281234567890", // Murni hanya angka
