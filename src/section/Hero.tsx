@@ -20,7 +20,7 @@ export const HeroSection = () => {
   const { displayText } = useTypewriter(typewriterText, 70, 40, 3000, 500);
 
   return (
-    <section className="relative overflow-hidden w-full min-h-screen flex items-end pt-28 pb-16 sm:pb-20 bg-[var(--bg-main)]">
+    <section className="relative overflow-hidden w-full min-h-screen flex items-end pt-28 pb-8 sm:pb-20 bg-[var(--bg-main)]">
       {/* Background Image dengan Dark Gradient Overlay yang Lebih Terang */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
