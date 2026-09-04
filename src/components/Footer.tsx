@@ -183,7 +183,7 @@ export const Footer = () => {
             <Code2 className="w-3.5 h-3.5 text-[var(--accent-neon)] shrink-0" />
             <span className="text-slate-300">
               Dibuat Oleh{" "}
-              <strong className="text-white font-semibold tracking-wide">
+              <strong className="text-[var(--accent-neon)] font-semibold tracking-wide">
                 Nagata Darmawan
               </strong>
             </span>

@@ -2,7 +2,7 @@
 const hanyaAngka = (teks: string) => teks.replace(/\D/g, "");
 
 export const siteConfig = {
-  name: "Ribuan MDPL",
+  name: "RibuanMDPL.id",
   description: "Penyedia jasa open trip & private trip pendakian gunung berpengalaman, aman, dan terjangkau.",
   logo: {
     prefix: "Ribuan",

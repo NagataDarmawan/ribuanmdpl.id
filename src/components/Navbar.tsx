@@ -25,7 +25,7 @@ export const Navbar = () => {
 
   const navLinks = [
     { label: "Beranda", href: "/" },
-    { label: "Paket & Jadwal", href: "/#paket" },
+    { label: "Paket & Jadwal", href: "/paket" },
     { label: "Galeri", href: "/#galeri" },
     { label: "Ulasan", href: "/#testimoni" },
     { label: "FAQ", href: "/#faq" },
@@ -41,24 +41,28 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-12">
-{/* Logo Brand Two-Tone dari siteConfig (Murni Logo Tanpa Card) */}
-<Link href="/" className="flex items-center gap-2.5 group">
-  {siteConfig.logo.image ? (
-    <img
-      src={siteConfig.logo.image}
-      alt={siteConfig.name}
-      className="w-9 h-9 object-contain group-hover:scale-105 transition-transform duration-300"
-    />
-  ) : (
-    <MountainSnow className="w-7 h-7 text-[var(--accent-neon)] group-hover:scale-105 transition-transform duration-300" />
-  )}
+          {/* Logo Brand Two-Tone dari siteConfig (Murni Logo Tanpa Card) */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            {siteConfig.logo.image ? (
+              <img
+                src={siteConfig.logo.image}
+                alt={siteConfig.name}
+                className="w-9 h-9 object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            ) : (
+              <MountainSnow className="w-7 h-7 text-[var(--accent-neon)] group-hover:scale-105 transition-transform duration-300" />
+            )}
 
-  <span className="text-lg font-bold tracking-tight drop-shadow-sm font-heading">
-    <span className="text-white">{siteConfig.logo.prefix}</span>
-    <span className="text-[var(--accent-neon)]">{siteConfig.logo.highlight}</span>
-    <span className="text-slate-400 text-sm font-normal">{siteConfig.logo.domain}</span>
-  </span>
-</Link>
+            <span className="text-lg font-bold tracking-tight drop-shadow-sm font-heading">
+              <span className="text-white">{siteConfig.logo.prefix}</span>
+              <span className="text-[var(--accent-neon)]">
+                {siteConfig.logo.highlight}
+              </span>
+              <span className="text-slate-400 text-sm font-normal">
+                {siteConfig.logo.domain}
+              </span>
+            </span>
+          </Link>
 
           {/* Floating Glassmorphism Nav Bar */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
