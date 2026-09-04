@@ -36,7 +36,7 @@ const FacebookIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 export const Footer = () => {
   const navLinks = [
     { label: "Beranda", href: "/" },
-    { label: "Paket & Jadwal", href: "/#paket" },
+    { label: "Paket & Jadwal", href: "/paket" },
     { label: "Galeri", href: "/#galeri" },
     { label: "Ulasan", href: "/#testimoni" },
     { label: "FAQ", href: "/#faq" },
