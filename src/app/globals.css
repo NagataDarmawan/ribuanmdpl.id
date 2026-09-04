@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Base Color System (Dark Luxury Palette) */
+    --bg-main: #050706; /* Hitam pekat murni */
+    --bg-card: #171512;        /* Hitam-Abu Warm Premium untuk Card/Modal */
+    --bg-card-hover: #211e1a;  /* Abu-Hitam Warm saat Hover */
+    
+    --border-color: #2d2823;   /* Garis Abu-Cokelat Muted yang Halus */
+    
+    --text-primary: #ffffff;   /* Putih Bersih untuk Title/Heading */
+    --text-secondary: #94a3b8; /* Abu-abu Muted untuk Subtitle/Deskripsi */
+    --text-muted: #64748b;     /* Abu-abu Gelap untuk Caption/Footer */
+    
+    /* Accent Color (Emas Mewah & Gold Glow) */
+    --accent-emerald: #d97706; /* Amber Gold Core */
+    --accent-neon: #fbbf24;    /* Gold Neon Premium untuk Highlight & CTA (#f59e0b / #fbbf24) */
+    --accent-glow: rgba(251, 191, 36, 0.15); /* Gold Glow Effect untuk Button/Card */
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Font khusus untuk Judul (Gagah & Tinggi ala gambar referensi) */
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading), sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Helper Utilities untuk Effect & Gradient */
+@layer utilities {
+  /* Utility Class Font */
+  .font-heading {
+    font-family: var(--font-heading), sans-serif;
+  }
+  .font-body {
+    font-family: var(--font-body), sans-serif;
+  }
+
+  /* Glow Effect Hijau Neon */
+  .neon-glow {
+    box-shadow: 0 0 25px -5px rgba(0, 255, 135, 0.3);
+  }
+  
+  .neon-glow-hover:hover {
+    box-shadow: 0 0 30px -2px rgba(0, 255, 135, 0.5);
+  }
+
+  /* Text Gradient Hijau Nyala untuk Title */
+  .text-gradient-neon {
+    background: linear-gradient(135deg, #ffffff 30%, #00ff87 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glassmorphism Dark Card */
+  .glass-card {
+    background: rgba(18, 23, 21, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+  }
+}
+
+/* Mencegah seluruh website bocor/geser ke samping */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Sembunyikan scrollbar kasar di browser saat di-swipe */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+html {
+  scroll-behavior: smooth;
+}
