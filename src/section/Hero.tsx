@@ -74,7 +74,7 @@ export const HeroSection = () => {
             custom={0.3}
             className="flex flex-row items-center gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full max-w-md sm:max-w-none"
           >
-            <Link href="/paket" className="flex-1 sm:flex-none">
+            <Link href="/#paket" className="flex-1 sm:flex-none">
               <Button
                 variant="primary"
                 size="md"
